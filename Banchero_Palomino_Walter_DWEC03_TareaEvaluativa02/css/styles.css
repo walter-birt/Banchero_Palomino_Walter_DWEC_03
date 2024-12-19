@@ -1,0 +1,277 @@
+/* Estilo general de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+header{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: bisque;
+  justify-content: space-around;
+  color: darkred;
+  border-radius: 10px;
+}
+/* Contenedor principal */
+.contenedor {
+    text-align: center;
+    /*max-width: 600px;*/
+    width: 100%;
+}
+
+/* Estilos para las cuadriculas vacías */
+.cuadriculas-vacias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para cada cuadricula vacía */
+.cuadricula-vacia {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    margin: 5px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.cuadricula-vacia.bloqueada {
+    background-color: violet;
+    pointer-events: none; 
+    border: #333 3px double;
+    box-shadow: 5px 5px 10px;
+}
+
+/* Estilos para los números */
+.numeros {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cuadricula-numero {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Número seleccionado */
+.cuadricula-numero.seleccionado {
+    background-color: #ffeb3b; 
+    border: 2px solid #f57c00;
+    cursor: grabbing; 
+}
+
+/* Deshabilitar números */
+.cuadricula-numero.deshabilitado {
+    opacity: 0.5;
+    pointer-events: none; 
+}
+
+.cuadricula-numero.arrastrando {
+    opacity: 0.5; 
+}
+
+/* Estilo para las pistas */
+.pistas {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para el resultado */
+#resultado {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Para cuando el usuario acierta */
+#resultado.green {
+    color: green; 
+}
+/* Para cuando el usuario falla */
+#resultado.red {
+    color: red; 
+}
+/* Cuadricula cuando el usuario pierde*/
+.cuadricula-vacia.perdida {
+    background-color: red; 
+    pointer-events: none; 
+    border: #333 3px double; 
+    box-shadow: 5px 5px 10px; 
+    color: white; 
+}
+
+/* Efectos para el número cuando está sobre él */
+.mouse-sobre-cuadricula { 
+    background-color: rgb(18, 122, 213); 
+}
+
+/* Estilo para el contenedor de pistas */
+.pistas div {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #007bff; 
+}
+
+/* Estilo del botón con imagen de flecha */
+.boton-comun {
+    width: 50px;              
+    height: 50px;              
+    padding: 0;               
+    font-size: 18px;          
+    color: white;              
+    background-color: #f0f0f0; 
+    border: none;             
+    border-radius: 50%;       
+    cursor: pointer;          
+    display: flex;             
+    align-items: center;      
+    justify-content: center;   
+    transition: background-color 0.3s, transform 0.3s ease; 
+}
+
+/* Efecto hover para los botones */
+.boton-comun:hover {
+    background-color: bisque;  
+    transform: translateY(-2px); 
+}
+
+/* Efecto focus para los botones */
+.boton-comun:focus {
+    outline: none;            
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+#boton-volver-ajugar {
+    background-image: url('../img/jugar.png');  
+    background-size: 30px 30px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #333;
+   
+}
+#boton-volver-ajugar:disabled {
+    cursor: not-allowed; 
+    opacity: 0.2; 
+}
+#boton-nivel {
+    background-image: url('../img/flecha-izquierda.png');  
+    background-size: 30px 30px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #333;
+}
+.contenedor-botones-opcion{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*-----------------Estilo Formulario--------------------*/
+#login-formulario {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.input-caja {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+button {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/*---- Estilo bienvenida.html------*/
+.contenedor-niveles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.contenedor-niveles div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+.contenedor-niveles button{
+    padding: 20px; 
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    width: 200px; 
+    transition: transform 0.2s, background-color 0.3s;
+    text-align: center;
+    color: black;
+    
+}
+.contenedor-niveles button:hover {
+    background-color: bisque;
+    transform: translateY(-3px);
+}
+.contenedor-niveles p {
+    margin-top: 10px; 
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    max-width: 150px; 
+    word-wrap: break-word; 
+}
+button.remarcar-boton {
+    background-color: #9fafc6;
+    border: 3px double #001b38; 
+}
+.contenedor-niveles p{
+    text-align: center;
+}

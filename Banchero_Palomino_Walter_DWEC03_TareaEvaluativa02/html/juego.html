@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h2 id="usuario-nombre">Walter</h2>
+            <p id="temporizador">Tiempo restante: 100 segundos</p>
+        </header>
+        <div class="contenedor-botones-opcion">
+        <button id="boton-nivel" class="boton-comun" onclick="window.location.href='../html/dificultad.html';"></button>
+        <h4 id="fallos"></h4>
+        <button id="boton-volver-ajugar" class="boton-comun" disabled></button>
+        </div>
+        <h1>Adivina el número</h1>
+        <h2>?</h2>
+        <div id="cuadriculas-vacias" class="cuadriculas-vacias"></div>
+        <div id="numeros" class="numeros"></div>
+        <!-- Contenedor para las pistas -->
+        <div id="pistas" class="pistas"></div>
+        <!--  Resultado del juego -->
+        <p id="resultado"></p>
+    </div>
+    
+   <script src="../js/juego.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
